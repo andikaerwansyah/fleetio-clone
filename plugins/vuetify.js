@@ -1,8 +1,16 @@
+import '@mdi/font/css/materialdesignicons.css'
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import colors from 'vuetify/es5/util/colors'
+import VueMeta from 'vue-meta'
+
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true
+})
 
 Vue.use(Vuetify, {
+  iconfont: 'mdi',
   theme: {
     primary: colors.blue.darken2,
     accent: colors.grey.darken3,

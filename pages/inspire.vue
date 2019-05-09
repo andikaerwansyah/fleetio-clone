@@ -1,12 +1,15 @@
 <template>
   <v-layout>
     <v-flex text-xs-center>
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
+      <img src="/blackbox-logo.jpeg" alt="Vuetify.js" class="mb-5" />
       <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
+        &#8220;Blackbox GPS Tracker with Fleetio Template.&#8221;
         <footer>
           <small>
-            <em>&mdash;John Johnson</em>
+            <em
+              >&mdash; Uji coba clone tampilan Layout dan dashboard Fleetio.com
+              dengan nuxt dan vuetify.js
+            </em>
           </small>
         </footer>
       </blockquote>
