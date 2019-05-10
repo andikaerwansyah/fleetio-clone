@@ -14,7 +14,7 @@ export default class extends Vue {
         text: ''
       },
       subtitle: {
-        text: 'Latest meter reading',
+        text: 'Latest meter readings',
         align: 'left'
       },
 

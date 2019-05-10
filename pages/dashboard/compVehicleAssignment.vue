@@ -10,7 +10,7 @@
       </v-flex>
       <v-flex xs6 column>
         <p class="text-xs-center headline orange--text">3</p>
-        <p class="text-xs-center">Assigned</p>
+        <p class="text-xs-center">Unassigned</p>
       </v-flex>
     </v-layout>
   </div>

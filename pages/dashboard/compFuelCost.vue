@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card-title>
-      Fuel Cost
+      Fuel Costs
       <v-spacer />
       <span class="caption"
         ><a href="#" style="text-decoration:none;">View Report</a></span
