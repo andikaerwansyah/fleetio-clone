@@ -3,9 +3,9 @@
     <v-card-title>
       Fuel Costs
       <v-spacer />
-      <span class="caption"
-        ><a href="#" style="text-decoration:none;">View Report</a></span
-      >
+      <span class="caption">
+        <a href="#" style="text-decoration:none;">View Report</a>
+      </span>
     </v-card-title>
     <div id="chart-fuel-cost"></div>
   </div>

@@ -1,15 +1,5 @@
 <template>
-  <div>
-    <v-card-title>
-      Cost Per Meter
-      <v-spacer />
-      <v-spacer />
-      <span class="caption">
-        <a href="#" style="text-decoration:none;">View Report</a>
-      </span>
-    </v-card-title>
-    <div id="chart-cost-permeter"></div>
-  </div>
+  <div id="chart-last-meter"></div>
 </template>
 
 <script lang="ts">
@@ -19,12 +9,12 @@ import * as Highcharts from 'highcharts'
 export default class extends Vue {
   private aaa = ''
   mounted() {
-    Highcharts.chart('chart-cost-permeter', {
+    Highcharts.chart('chart-last-meter', {
       title: {
         text: ''
       },
       subtitle: {
-        text: '',
+        text: 'Latest meter readings',
         align: 'left'
       },
 
@@ -36,6 +26,11 @@ export default class extends Vue {
       xAxis: {
         type: 'datetime'
       },
+      legend: {
+        layout: 'horizontal',
+        align: 'center',
+        verticalAlign: 'bottom'
+      },
 
       plotOptions: {
         series: {
@@ -43,16 +38,22 @@ export default class extends Vue {
             connectorAllowed: false
           },
           pointStart: Date.UTC(2010, 0, 1),
-          pointInterval: 24 * 3600 * 1000 // one day
+          pointInterval: 24 * 3600 * 1000 // one days
         }
       },
-      chart: {
-        height: 150
-      },
+
       series: [
         {
-          name: 'Cost/Mi',
-          data: [0, 1, 0]
+          name: 'Miles',
+          data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        },
+        {
+          name: 'Kilometers',
+          data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+        },
+        {
+          name: 'Hours',
+          data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
         }
       ] as any,
 
@@ -60,8 +61,7 @@ export default class extends Vue {
         rules: [
           {
             condition: {
-              maxWidth: 300,
-              maxHeight: 150
+              maxWidth: 300
             },
             chartOptions: {
               legend: {
@@ -77,4 +77,5 @@ export default class extends Vue {
   }
 }
 </script>
+
 <style></style>

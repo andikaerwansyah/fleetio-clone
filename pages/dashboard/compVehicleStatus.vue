@@ -3,9 +3,9 @@
     <v-card-title>
       Vehicle
       <v-spacer />
-      <span class="caption"
-        ><a href="#" style="text-decoration:none;">View Report</a></span
-      >
+      <span class="caption">
+        <a href="#" style="text-decoration:none;">View Report</a>
+      </span>
     </v-card-title>
     <v-list id="style-2" style="max-height:150px" class="scroll-y">
       <v-list-tile v-for="item in ListItems" :key="item.status">

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <v-card-title>
-      Vehicle Assignments
-    </v-card-title>
+    <v-card-title>Vehicle Assignments</v-card-title>
     <v-layout row>
       <v-flex xs6 column>
         <p class="text-xs-center headline green--text">10</p>

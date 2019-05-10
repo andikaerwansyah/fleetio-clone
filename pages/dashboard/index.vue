@@ -11,7 +11,7 @@
       </v-flex>
       <v-flex xs12 sm6>
         <v-card class="bra-5 pa-2">
-          <compChartCostPermeter></compChartCostPermeter>
+          <comp-last-meter></comp-last-meter>
         </v-card>
       </v-flex>
       <v-flex xs12 sm3 column>
@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import compChartCostPermeter from './comp_chart_cost_permeter.vue'
+import compLastMeter from './compLastMeter.vue'
 import compVehicleStatus from './compVehicleStatus.vue'
 import compCostPermeter from './compCostPermeter.vue'
 import compVehicleAssignment from './compVehicleAssignment.vue'
@@ -36,7 +36,7 @@ import compFuelCost from './compFuelCost.vue'
 
 @Component({
   components: {
-    compChartCostPermeter,
+    compLastMeter,
     compVehicleStatus,
     compCostPermeter,
     compVehicleAssignment,
