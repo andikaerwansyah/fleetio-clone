@@ -118,7 +118,7 @@ export default class DefaultLayout extends Vue {
     {
       icon: 'mdi-crosshairs-gps',
       title: 'Tracking',
-      to: '/vehicles/tracking'
+      to: '/tracking'
     },
     {
       icon: 'mdi-office-building',
