@@ -42,49 +42,23 @@
           </v-list>
         </v-toolbar>
         <v-list dense>
-          <v-list-tile to="/dashboard">
-            <v-list-tile-action>
-              <v-icon>mdi-speedometer</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title class="font-weight-bold"
-                >Dashboard</v-list-tile-title
-              >
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-group
+          <v-list-tile
             v-for="item in sidebarMenus"
             :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.icon"
-            no-action
+            :to="item.to"
+            route
+            exact
           >
-            <template v-slot:activator>
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-title class="font-weight-bold">{{
-                    item.title
-                  }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </template>
-
-            <v-list-tile
-              v-for="subItem in item.items"
-              :key="subItem.title"
-              :to="subItem.to"
-              router
-              exact
-            >
-              <v-list-tile-content>
-                <v-list-tile-title class="font-weight-bold">{{
-                  subItem.title
-                }}</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list-group>
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title class="font-weight-bold">{{
+                item.title
+              }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
         </v-list>
-
         <v-spacer />
         <v-list>
           <v-list-tile>
@@ -105,15 +79,16 @@
       </v-layout>
     </v-navigation-drawer>
     <v-toolbar :clipped-left="clipped" fixed app color="white">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-img
-        :src="require('../static/blackbox-logo.jpeg')"
+        :src="require('../static/black-box-logo.png')"
         contain
-        height="40"
+        height="55"
         position="left left"
       />
       <v-spacer />
-      <v-btn flat icon color="primary" outline>
-        <v-icon>mdi-plus</v-icon>
+      <v-btn flat icon color="grey" outline>
+        <v-icon>mdi-help</v-icon>
       </v-btn>
     </v-toolbar>
     <v-content>
@@ -136,21 +111,24 @@ export default class DefaultLayout extends Vue {
   private y = 50
   private sidebarMenus = [
     {
-      icon: 'mdi-car',
-      title: 'Vehicles',
-      items: [
-        { title: 'Vehicle List', to: '/inspire' },
-        { title: 'Vehicle Assignment', to: '/inspire' },
-        { title: 'Live Tracking', to: '/vehicles/tracking' }
-      ]
+      icon: 'mdi-speedometer',
+      title: 'Dashboard',
+      to: '/dashboard'
     },
     {
-      icon: 'mdi-fuel',
-      title: 'Fuel',
-      items: [
-        { title: 'Fuel History', to: '/inspire' },
-        { title: 'Fuel Integration', to: '/inspire' }
-      ]
+      icon: 'mdi-crosshairs-gps',
+      title: 'Tracking',
+      to: '/vehicles/tracking'
+    },
+    {
+      icon: 'mdi-office-building',
+      title: 'Management',
+      to: '/management'
+    },
+    {
+      icon: 'mdi-file-cabinet',
+      title: 'Report',
+      to: '/report'
     }
   ]
   private menus = [{ title: 'Biling & Subscriptions' }, { title: 'Sign Out' }]
