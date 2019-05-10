@@ -46,7 +46,8 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-leaflet',
   ],
   /*
    ** Axios module configuration
@@ -66,6 +67,7 @@ export default {
         import: ['~assets/style/variables.styl']
       }
     },
+    vendor: ['vue2-leaflet'],
     /*
      ** You can extend webpack config here
      */
