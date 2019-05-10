@@ -22,9 +22,7 @@
                     Company Name
                     <v-icon small>mdi-chevron-down</v-icon>
                   </span>
-                  <p class="caption mb-0">
-                    Andika Erwansyah
-                  </p>
+                  <p class="caption mb-0">User Name</p>
                 </v-layout>
               </v-list-tile-content>
             </v-list-tile>
@@ -49,7 +47,9 @@
               <v-icon>mdi-speedometer</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>Dashboard</v-list-tile-title>
+              <v-list-tile-title class="font-weight-bold"
+                >Dashboard</v-list-tile-title
+              >
             </v-list-tile-content>
           </v-list-tile>
           <v-list-group
@@ -62,7 +62,9 @@
             <template v-slot:activator>
               <v-list-tile>
                 <v-list-tile-content>
-                  <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                  <v-list-tile-title class="font-weight-bold">{{
+                    item.title
+                  }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </template>
@@ -75,7 +77,9 @@
               exact
             >
               <v-list-tile-content>
-                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+                <v-list-tile-title class="font-weight-bold">{{
+                  subItem.title
+                }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
@@ -113,9 +117,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>
@@ -138,7 +140,8 @@ export default class DefaultLayout extends Vue {
       title: 'Vehicles',
       items: [
         { title: 'Vehicle List', to: '/inspire' },
-        { title: 'Vehicle Assignment', to: '/inspire' }
+        { title: 'Vehicle Assignment', to: '/inspire' },
+        { title: 'Live Tracking', to: '/vehicles/tracking' }
       ]
     },
     {
