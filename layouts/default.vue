@@ -102,7 +102,7 @@
     </v-navigation-drawer>
     <v-toolbar :clipped-left="clipped" fixed app color="white">
       <v-img
-        src="./blackbox-logo.jpeg"
+        :src="require('../static/blackbox-logo.jpeg')"
         contain
         height="40"
         position="left left"
